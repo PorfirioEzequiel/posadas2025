@@ -1,6 +1,6 @@
 import React, { useRef, useState } from 'react';
 import { Button, Container, Form } from "react-bootstrap";
-import pbsdata from './PBS_06112024.json';
+import pbsdata from './PBS_08012025.json';
 import './estilos.css'
 import supabase from './supabaseClient';
 
@@ -111,7 +111,7 @@ const handleSubmit= async(e)=>{
   //   .catch(err => console.log(err));
   try {
     const { data, error } = await supabase
-      .from('CalaveritasNov2024_2') // nombre de la tabla en Supabase
+      .from('Posadas2025') // nombre de la tabla en Supabase
       .insert([formData]); // envía el objeto con los datos del formulario
 
     if (error) throw error;
@@ -150,7 +150,7 @@ return(
          <Container className="content" style={{ width: "auto", height: "auto", alignItems: "center", display: "flex", justifyContent: "center" }}>
         <div className="row">
           <div className="col-sm-12">
-         <h1>Evidencia Entrega <span style={{color: 'orange'}}>Calaverita 01/11/2024</span></h1>
+         <h1>Evidencia Entrega <span style={{color: 'pink'}}>Partición en Posadas DIF 2025</span></h1>
          <form className="row g-3" onSubmit={handleSubmit}>
 
               <div className="col-md-3">
